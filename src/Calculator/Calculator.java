@@ -1,0 +1,1158 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Calculator;
+/**
+ *
+ * @author Amrit Singh
+ */
+public class Calculator extends javax.swing.JFrame {
+double num=0;
+int op;
+int count=0;
+//In this method define how  equal to button work
+void cal(){
+switch(op){
+    case 1: {//for addition
+            opration.setText(opration.getText()+"+"+content.getText());  
+            num=num+Double.parseDouble( content.getText()); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 2: {//for subtraction
+            opration.setText(opration.getText()+"-"+content.getText());  
+            num=num-Double.parseDouble( content.getText()); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 3: {//for multiplication
+            opration.setText(opration.getText()+"*"+content.getText());  
+            num=num*Double.parseDouble( content.getText()); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 4: {//for division
+            opration.setText(opration.getText()+"/"+content.getText());  
+            num=num/Double.parseDouble( content.getText()); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 5: {//for power of
+            opration.setText(opration.getText()+" pow "+content.getText());  
+            num=Math.pow(num,Double.parseDouble( content.getText())); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 6: {//for squae root
+            opration.setText(opration.getText()+"("+content.getText()+")sqrt");  
+            num=Math.sqrt(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 7: {//for cube root
+            opration.setText(opration.getText()+"("+content.getText()+")cbrt");  
+            num=Math.cbrt(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 8: {//for sin
+            opration.setText(opration.getText()+"sin("+content.getText()+")");  
+            num=Math.sin(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 9: {//for cos
+            opration.setText(opration.getText()+"cos("+content.getText()+")");  
+            num=Math.cos(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 10: {//for tan
+            opration.setText(opration.getText()+"tan("+content.getText()+")");  
+            num=Math.tan(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 11: {//for asin
+            opration.setText(opration.getText()+"asin("+content.getText()+")");  
+            num=Math.asin(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 12: {//for acos
+            opration.setText(opration.getText()+"acos("+content.getText()+")");  
+            num=Math.acos(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 13: {//for atan
+            opration.setText(opration.getText()+"atan("+content.getText()+")");  
+            num=Math.atan(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 14: {//for sinh
+            opration.setText(opration.getText()+"sinh("+content.getText()+")");  
+            num=Math.sinh(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 15: {//for cosh
+            opration.setText(opration.getText()+"cosh("+content.getText()+")");  
+            num=Math.cosh(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 16: {//for tanh
+            opration.setText(opration.getText()+"tanh("+content.getText()+")");  
+            num=Math.tanh(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 17: {//for toDegrees
+            opration.setText(opration.getText()+" ("+content.getText()+")toDegrees ");  
+            num=Math.toDegrees(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+    case 18: {//for toRadians
+            opration.setText(opration.getText()+" ("+content.getText()+")toRadians ");  
+            num=Math.toRadians(num); 
+            content.setText(String.valueOf(num)); 
+            break;
+            }
+}
+}    
+
+    public Calculator() {
+        initComponents();
+    }
+
+    /**
+     * This method is called from within the constructor to initialize the form.
+     * WARNING: Do NOT modify this code. The content of this method is always
+     * regenerated by the Form Editor.
+     */
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        content = new javax.swing.JTextField();
+        N7 = new javax.swing.JButton();
+        N8 = new javax.swing.JButton();
+        N9 = new javax.swing.JButton();
+        mul = new javax.swing.JButton();
+        N4 = new javax.swing.JButton();
+        N5 = new javax.swing.JButton();
+        N6 = new javax.swing.JButton();
+        add = new javax.swing.JButton();
+        N1 = new javax.swing.JButton();
+        N2 = new javax.swing.JButton();
+        N3 = new javax.swing.JButton();
+        sub = new javax.swing.JButton();
+        Clear = new javax.swing.JButton();
+        Backs = new javax.swing.JButton();
+        div = new javax.swing.JButton();
+        N_0 = new javax.swing.JButton();
+        N_00 = new javax.swing.JButton();
+        dot = new javax.swing.JButton();
+        equal = new javax.swing.JButton();
+        on = new javax.swing.JRadioButton();
+        off = new javax.swing.JRadioButton();
+        opration = new javax.swing.JLabel();
+        pow = new javax.swing.JButton();
+        sqrt = new javax.swing.JButton();
+        cbrt = new javax.swing.JButton();
+        sin = new javax.swing.JButton();
+        cos = new javax.swing.JButton();
+        tan = new javax.swing.JButton();
+        asin = new javax.swing.JButton();
+        cosh = new javax.swing.JButton();
+        acos = new javax.swing.JButton();
+        atan = new javax.swing.JButton();
+        sinh = new javax.swing.JButton();
+        tanh = new javax.swing.JButton();
+        todeg = new javax.swing.JButton();
+        torad = new javax.swing.JButton();
+        MenuBar = new javax.swing.JMenuBar();
+        Menu = new javax.swing.JMenu();
+        Simple = new javax.swing.JMenuItem();
+        Scientific = new javax.swing.JMenuItem();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculater");
+        setBounds(new java.awt.Rectangle(20, 20, 215, 400));
+        setIconImages(null);
+        setResizable(false);
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+            }
+        });
+
+        content.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        content.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                contentFocusGained(evt);
+            }
+        });
+
+        N7.setText("7");
+        N7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N7ActionPerformed(evt);
+            }
+        });
+
+        N8.setText("8");
+        N8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N8ActionPerformed(evt);
+            }
+        });
+
+        N9.setText("9");
+        N9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N9ActionPerformed(evt);
+            }
+        });
+
+        mul.setText("*");
+        mul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mulActionPerformed(evt);
+            }
+        });
+
+        N4.setText("4");
+        N4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N4ActionPerformed(evt);
+            }
+        });
+
+        N5.setText("5");
+        N5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N5ActionPerformed(evt);
+            }
+        });
+
+        N6.setText("6");
+        N6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N6ActionPerformed(evt);
+            }
+        });
+
+        add.setText("+");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
+
+        N1.setText("1");
+        N1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N1ActionPerformed(evt);
+            }
+        });
+
+        N2.setText("2");
+        N2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N2ActionPerformed(evt);
+            }
+        });
+
+        N3.setText("3");
+        N3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N3ActionPerformed(evt);
+            }
+        });
+
+        sub.setText("-");
+        sub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subActionPerformed(evt);
+            }
+        });
+
+        Clear.setText("C");
+        Clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClearActionPerformed(evt);
+            }
+        });
+
+        Backs.setText("<-");
+        Backs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BacksActionPerformed(evt);
+            }
+        });
+
+        div.setText("/");
+        div.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divActionPerformed(evt);
+            }
+        });
+
+        N_0.setText("0");
+        N_0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N_0ActionPerformed(evt);
+            }
+        });
+
+        N_00.setText("00");
+        N_00.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                N_00ActionPerformed(evt);
+            }
+        });
+
+        dot.setText(".");
+        dot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dotActionPerformed(evt);
+            }
+        });
+
+        equal.setText("=");
+        equal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equalActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(on);
+        on.setText("ON");
+        on.setEnabled(false);
+        on.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(off);
+        off.setText("OFF");
+        off.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                offActionPerformed(evt);
+            }
+        });
+
+        opration.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        opration.setToolTipText("");
+
+        pow.setText("Power of ");
+        pow.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                powActionPerformed(evt);
+            }
+        });
+
+        sqrt.setText("Square root");
+        sqrt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sqrtActionPerformed(evt);
+            }
+        });
+
+        cbrt.setText("Cube root");
+        cbrt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbrtActionPerformed(evt);
+            }
+        });
+
+        sin.setText("sin( )");
+        sin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sinActionPerformed(evt);
+            }
+        });
+
+        cos.setText("cos( )");
+        cos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cosActionPerformed(evt);
+            }
+        });
+
+        tan.setText("tan( )");
+        tan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tanActionPerformed(evt);
+            }
+        });
+
+        asin.setText("asin( )");
+        asin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asinActionPerformed(evt);
+            }
+        });
+
+        cosh.setText("cosh( )");
+        cosh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                coshActionPerformed(evt);
+            }
+        });
+
+        acos.setText("acos( )");
+        acos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acosActionPerformed(evt);
+            }
+        });
+
+        atan.setText("atan( )");
+        atan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atanActionPerformed(evt);
+            }
+        });
+
+        sinh.setText("sinh( )");
+        sinh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sinhActionPerformed(evt);
+            }
+        });
+
+        tanh.setText("tanh( )");
+        tanh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tanhActionPerformed(evt);
+            }
+        });
+
+        todeg.setText("toDegrees");
+        todeg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                todegActionPerformed(evt);
+            }
+        });
+
+        torad.setText("toRadians");
+        torad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toradActionPerformed(evt);
+            }
+        });
+
+        Menu.setText("|||");
+
+        Simple.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK));
+        Simple.setText("Simple Calculater");
+        Simple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SimpleActionPerformed(evt);
+            }
+        });
+        Menu.add(Simple);
+
+        Scientific.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK));
+        Scientific.setText("Scientific Calculater");
+        Scientific.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ScientificActionPerformed(evt);
+            }
+        });
+        Menu.add(Scientific);
+
+        MenuBar.add(Menu);
+
+        setJMenuBar(MenuBar);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(on, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(off)
+                            .addComponent(N7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N_0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N_00))
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Backs)
+                            .addComponent(N9, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(N3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dot, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(equal, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(mul, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(tanh)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(todeg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(torad, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(acos)
+                                        .addGap(4, 4, 4)
+                                        .addComponent(atan)
+                                        .addGap(4, 4, 4)
+                                        .addComponent(sinh)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cosh))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(pow, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(6, 6, 6)
+                                            .addComponent(sqrt)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(cbrt, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(sin, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(cos, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(tan, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(asin)))))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(opration, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(content, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)))
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(opration, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Clear, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(on)
+                                .addGap(3, 3, 3)
+                                .addComponent(off)))
+                        .addGap(7, 7, 7)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(N7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(N4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(N1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(N_0, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(N8, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(N5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(N2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6)
+                                .addComponent(N_00, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(pow, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(sqrt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbrt, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(sin, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tan, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(asin, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(acos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(atan, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(sinh, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cosh, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(tanh, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(todeg, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(torad, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(Backs, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(7, 7, 7)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(N9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(7, 7, 7)
+                                    .addComponent(N6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(6, 6, 6)
+                                    .addComponent(N3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(6, 6, 6)
+                                    .addComponent(dot, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(mul, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(6, 6, 6)
+                                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(6, 6, 6)
+                                    .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(6, 6, 6)
+                                    .addComponent(equal, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void N_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N_0ActionPerformed
+      content.setText(content.getText()+"0");
+    }//GEN-LAST:event_N_0ActionPerformed
+
+    private void N_00ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N_00ActionPerformed
+     content.setText(content.getText()+"00");
+    }//GEN-LAST:event_N_00ActionPerformed
+
+    private void dotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dotActionPerformed
+       if(content.getText().contains(".")){}
+       else {content.setText(content.getText()+".");}
+    }//GEN-LAST:event_dotActionPerformed
+
+    private void N1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N1ActionPerformed
+        content.setText(content.getText()+"1");
+    }//GEN-LAST:event_N1ActionPerformed
+
+    private void N2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N2ActionPerformed
+        content.setText(content.getText()+"2");
+    }//GEN-LAST:event_N2ActionPerformed
+
+    private void N3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N3ActionPerformed
+        content.setText(content.getText()+"3");
+    }//GEN-LAST:event_N3ActionPerformed
+
+    private void N6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N6ActionPerformed
+        content.setText(content.getText()+"6");
+    }//GEN-LAST:event_N6ActionPerformed
+
+    private void N5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N5ActionPerformed
+        content.setText(content.getText()+"5");
+    }//GEN-LAST:event_N5ActionPerformed
+
+    private void N4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N4ActionPerformed
+        content.setText(content.getText()+"4");
+    }//GEN-LAST:event_N4ActionPerformed
+
+    private void N7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N7ActionPerformed
+        content.setText(content.getText()+"7");
+    }//GEN-LAST:event_N7ActionPerformed
+
+    private void N8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N8ActionPerformed
+        content.setText(content.getText()+"8");
+    }//GEN-LAST:event_N8ActionPerformed
+
+    private void N9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_N9ActionPerformed
+        content.setText(content.getText()+"9");
+    }//GEN-LAST:event_N9ActionPerformed
+
+    private void ClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearActionPerformed
+        content.setText("");
+        opration.setText("");
+        count=0;
+    }//GEN-LAST:event_ClearActionPerformed
+
+    private void BacksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BacksActionPerformed
+//backspace button code
+        String S=content.getText();
+    int len=S.length();
+        if(len!=0) {
+    String Fs=S.substring(0, len-1);
+    content.setText(Fs);}
+    }//GEN-LAST:event_BacksActionPerformed
+
+    private void onActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onActionPerformed
+    //On button code
+    N1.setEnabled(true);
+    N2.setEnabled(true);
+    N3.setEnabled(true);
+    N4.setEnabled(true);
+    N5.setEnabled(true);
+    N6.setEnabled(true);
+    N7.setEnabled(true);
+    N8.setEnabled(true);
+    N9.setEnabled(true);
+    N_0.setEnabled(true);
+    N_00.setEnabled(true);
+    Clear.setEnabled(true);
+    Backs.setEnabled(true);
+    div.setEnabled(true);
+    add.setEnabled(true);
+    sub.setEnabled(true);
+    mul.setEnabled(true);
+    div.setEnabled(true);
+    dot.setEnabled(true);
+    equal.setEnabled(true);
+    content.setEnabled(true);
+    off.setEnabled(true);
+    on.setEnabled(false);
+    }//GEN-LAST:event_onActionPerformed
+
+    private void offActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offActionPerformed
+      //Off button code
+        content.setText("");
+        opration.setText("");
+        count=0;
+    N1.setEnabled(false);
+    N2.setEnabled(false);
+    N3.setEnabled(false);
+    N4.setEnabled(false);
+    N5.setEnabled(false);
+    N6.setEnabled(false);
+    N7.setEnabled(false);
+    N8.setEnabled(false);
+    N9.setEnabled(false);
+    N_0.setEnabled(false);
+    N_00.setEnabled(false);
+    Clear.setEnabled(false);
+    Backs.setEnabled(false);
+    div.setEnabled(false);
+    add.setEnabled(false);
+    sub.setEnabled(false);
+    mul.setEnabled(false);
+    div.setEnabled(false);
+    dot.setEnabled(false);
+    equal.setEnabled(false);
+    content.setEnabled(false);
+    off.setEnabled(false);
+    on.setEnabled(true);
+    }//GEN-LAST:event_offActionPerformed
+
+    private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
+        //Multiplication button
+        op=3; 
+        if(count>0){
+        num=Double.parseDouble(content.getText());
+        content.setText(null);
+        }
+       else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+content.getText());
+            content.setText(null);
+        }
+        count++;
+    }//GEN-LAST:event_mulActionPerformed
+
+    private void equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalActionPerformed
+      //equalto button
+        cal();
+    }//GEN-LAST:event_equalActionPerformed
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        //addition button
+        op=1;
+        if(count>0)
+        {num=Double.parseDouble(content.getText());
+        content.setText(null);
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+content.getText());
+            content.setText(null);
+        }
+        count++;
+    }//GEN-LAST:event_addActionPerformed
+
+    private void contentFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_contentFocusGained
+        //content field 
+        content.setText("");
+    }//GEN-LAST:event_contentFocusGained
+
+    private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
+  //subtraction button
+        op=2;    
+        if(count>0)
+        {num=Double.parseDouble(content.getText());
+        content.setText(null);
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+content.getText());
+            content.setText(null);
+        }
+        count++;
+    }//GEN-LAST:event_subActionPerformed
+
+    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        //division button
+        op=4;    
+        if(count>0)
+        {num=Double.parseDouble(content.getText());
+            content.setText(null);
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+content.getText());
+            content.setText(null);
+        }
+        count++;
+    }//GEN-LAST:event_divActionPerformed
+
+    private void powActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powActionPerformed
+        op=5;
+        if(count>0)
+        {num=Double.parseDouble(content.getText());
+            content.setText(null);
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+content.getText());
+            content.setText(null);
+        }
+    }//GEN-LAST:event_powActionPerformed
+
+    private void sqrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sqrtActionPerformed
+      op=6;
+        if(count>0)
+        {opration.setText(opration.getText()+"("+content.getText()+")sqrt ");
+           num=Math.sqrt(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"("+content.getText()+")sqrt ");
+            num=Math.sqrt(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_sqrtActionPerformed
+
+    private void cbrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbrtActionPerformed
+        op=7;
+        if(count>0)
+        {opration.setText(opration.getText()+"("+content.getText()+")cbrt ");
+           num=Math.cbrt(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"("+content.getText()+")cbrt ");
+            num=Math.cbrt(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_cbrtActionPerformed
+
+    private void SimpleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SimpleActionPerformed
+        opration.setBounds(10, 6, 193, 36);
+        content.setBounds(10, 45, 193, 46);
+        pow.setVisible(false);
+        sqrt.setVisible(false);
+        cbrt.setVisible(false);
+        sin.setVisible(false);
+        cos.setVisible(false);
+        tan.setVisible(false);
+        asin.setVisible(false);
+        acos.setVisible(false);
+        atan.setVisible(false);
+        sinh.setVisible(false);
+        cosh.setVisible(false);
+        tanh.setVisible(false);
+        todeg.setVisible(false);
+        torad.setVisible(false);
+        setSize(215,400);
+    }//GEN-LAST:event_SimpleActionPerformed
+
+    private void sinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinActionPerformed
+       op=8;
+        if(count>0)
+        {opration.setText(opration.getText()+"sin("+content.getText()+") ");
+           num=Math.sin(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"sin("+content.getText()+") ");
+            num=Math.sin(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_sinActionPerformed
+
+    private void cosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosActionPerformed
+        op=9;
+        if(count>0)
+        {opration.setText(opration.getText()+"cos("+content.getText()+") ");
+           num=Math.cos(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"cos("+content.getText()+") ");
+            num=Math.cos(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_cosActionPerformed
+
+    private void tanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanActionPerformed
+        op=10;
+        if(count>0)
+        {opration.setText(opration.getText()+"tan("+content.getText()+") ");
+           num=Math.tan(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"tan("+content.getText()+") ");
+            num=Math.tan(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_tanActionPerformed
+
+    private void asinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asinActionPerformed
+       op=11;
+        if(count>0)
+        {opration.setText(opration.getText()+"asin("+content.getText()+") ");
+           num=Math.asin(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"asin("+content.getText()+") ");
+            num=Math.asin(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_asinActionPerformed
+
+    private void coshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_coshActionPerformed
+       op=15;
+        if(count>0)
+        {opration.setText(opration.getText()+"cosh("+content.getText()+") ");
+           num=Math.cosh(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"cosh("+content.getText()+") ");
+            num=Math.cosh(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_coshActionPerformed
+
+    private void acosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acosActionPerformed
+        op=12;
+        if(count>0)
+        {opration.setText(opration.getText()+"acos("+content.getText()+") ");
+           num=Math.acos(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"acos("+content.getText()+") ");
+            num=Math.acos(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_acosActionPerformed
+
+    private void atanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atanActionPerformed
+       op=12;
+        if(count>0)
+        {opration.setText(opration.getText()+"atan("+content.getText()+") ");
+           num=Math.atan(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"atan("+content.getText()+") ");
+            num=Math.atan(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_atanActionPerformed
+
+    private void sinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinhActionPerformed
+        op=14;
+        if(count>0)
+        {opration.setText(opration.getText()+"sinh("+content.getText()+") ");
+           num=Math.sinh(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"sinh("+content.getText()+") ");
+            num=Math.sinh(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_sinhActionPerformed
+
+    private void tanhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanhActionPerformed
+          op=16;
+        if(count>0)
+        {opration.setText(opration.getText()+"tanh("+content.getText()+") ");
+           num=Math.tanh(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+"tanh("+content.getText()+") ");
+            num=Math.tanh(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_tanhActionPerformed
+
+    private void todegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_todegActionPerformed
+        op=17;
+        if(count>0)
+        {opration.setText(opration.getText()+" ("+content.getText()+")toDegrees ");
+           num=Math.toDegrees(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+" ("+content.getText()+")toDegrees ");
+            num=Math.toDegrees(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_todegActionPerformed
+
+    private void toradActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toradActionPerformed
+         op=18;
+        if(count>0)
+        {opration.setText(opration.getText()+" ("+content.getText()+")toRadians ");
+           num=Math.toRadians(num); 
+            content.setText(String.valueOf(num)); 
+        }else{
+        num=Double.parseDouble(content.getText());
+            opration.setText(opration.getText()+" ("+content.getText()+")toRadians ");
+            num=Math.toRadians(num); 
+            content.setText(String.valueOf(num)); 
+        }
+    }//GEN-LAST:event_toradActionPerformed
+
+    private void ScientificActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScientificActionPerformed
+        pow.setVisible(true);
+        sqrt.setVisible(true);
+        cbrt.setVisible(true);
+        sin.setVisible(true);
+        cos.setVisible(true);
+        tan.setVisible(true);
+        asin.setVisible(true);
+        acos.setVisible(true);
+        atan.setVisible(true);
+        sinh.setVisible(true);
+        cosh.setVisible(true);
+        tanh.setVisible(true);
+        todeg.setVisible(true);
+        torad.setVisible(true);
+        setSize(508, 400);
+    }//GEN-LAST:event_ScientificActionPerformed
+
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+ setSize(215,400);  
+        pow.setVisible(false);
+        sqrt.setVisible(false);
+        cbrt.setVisible(false);
+        sin.setVisible(false);
+        cos.setVisible(false);
+        tan.setVisible(false);
+        asin.setVisible(false);
+        acos.setVisible(false);
+        atan.setVisible(false);
+        sinh.setVisible(false);
+        cosh.setVisible(false);
+        tanh.setVisible(false);
+        todeg.setVisible(false);
+        torad.setVisible(false);
+
+    }//GEN-LAST:event_formWindowGainedFocus
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Calculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Calculator().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Backs;
+    private javax.swing.JButton Clear;
+    private javax.swing.JMenu Menu;
+    private javax.swing.JMenuBar MenuBar;
+    private javax.swing.JButton N1;
+    private javax.swing.JButton N2;
+    private javax.swing.JButton N3;
+    private javax.swing.JButton N4;
+    private javax.swing.JButton N5;
+    private javax.swing.JButton N6;
+    private javax.swing.JButton N7;
+    private javax.swing.JButton N8;
+    private javax.swing.JButton N9;
+    private javax.swing.JButton N_0;
+    private javax.swing.JButton N_00;
+    private javax.swing.JMenuItem Scientific;
+    private javax.swing.JMenuItem Simple;
+    private javax.swing.JButton acos;
+    private javax.swing.JButton add;
+    private javax.swing.JButton asin;
+    private javax.swing.JButton atan;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton cbrt;
+    private javax.swing.JTextField content;
+    private javax.swing.JButton cos;
+    private javax.swing.JButton cosh;
+    private javax.swing.JButton div;
+    private javax.swing.JButton dot;
+    private javax.swing.JButton equal;
+    private javax.swing.JButton mul;
+    private javax.swing.JRadioButton off;
+    private javax.swing.JRadioButton on;
+    private javax.swing.JLabel opration;
+    private javax.swing.JButton pow;
+    private javax.swing.JButton sin;
+    private javax.swing.JButton sinh;
+    private javax.swing.JButton sqrt;
+    private javax.swing.JButton sub;
+    private javax.swing.JButton tan;
+    private javax.swing.JButton tanh;
+    private javax.swing.JButton todeg;
+    private javax.swing.JButton torad;
+    // End of variables declaration//GEN-END:variables
+}
